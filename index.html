@@ -1,354 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ratnesh Pandey | Software Developer</title>
+<meta name="description" content="Portfolio of Ratnesh Pandey, a software developer from Bettiah, Bihar who builds responsive web applications and e-commerce interfaces with HTML, CSS, JavaScript, React and PHP.">
+<meta name="author" content="Ratnesh Pandey">
+<meta property="og:title" content="Ratnesh Pandey | Software Developer">
+<meta property="og:description" content="Responsive web applications and e-commerce interfaces. Open to new opportunities.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213D'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' text-anchor='middle' fill='%23F2A33A'%3ERP%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14213D;
+  --paper:#F3F7FB;
+  --sky:#D3E5F6;
+  --slate:#4A5B72;
+  --saffron:#B9690A;
+  --saffron-bright:#F2A33A;
+  --line:#C5D4E4;
+  --surface:#FFFFFF;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#E8EFF8;
+    --paper:#0E1727;
+    --sky:#16253D;
+    --slate:#9FB0C6;
+    --saffron:#F2A33A;
+    --saffron-bright:#F2A33A;
+    --line:#26364F;
+    --surface:#132036;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1.2rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron-bright);outline-offset:3px;border-radius:2px}
+.wrap{width:min(1080px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;z-index:20}
+.skip:focus{left:8px}
 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="this is official website of ratnesh  pandey">
-     <meta name="keywords"
-          content="ratnesh  pandey , skpandey , ratnesh pandey photos , ratnesh deoghar , ratneshhera, ratneshpandey">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+/* header */
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.mark{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{font-family:var(--display);font-weight:500;font-size:.98rem;text-decoration:none;color:var(--slate);padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--saffron-bright)}
 
-     <title>Ratnesh Pandey</title>
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--sky);border-bottom:1px solid var(--line)}
+.hero .wrap{padding:clamp(56px,10vw,120px) 0 clamp(48px,8vw,96px);position:relative;z-index:2}
+.hero h1{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(3.4rem,13vw,9.5rem);
+  line-height:.9;letter-spacing:-.045em;
+  font-variation-settings:"opsz" 96;
+}
+.hero h1 span{display:block}
+.hero .role{
+  margin-top:clamp(24px,4vw,40px);
+  font-size:clamp(1.25rem,2.4vw,1.6rem);
+  max-width:34ch;
+  color:var(--ink);
+}
+.status{
+  display:inline-flex;align-items:center;gap:10px;margin-top:28px;
+  font-family:var(--display);font-weight:500;font-size:.98rem;
+  background:var(--surface);border:1px solid var(--line);padding:9px 16px;border-radius:999px;
+}
+.status i{width:10px;height:10px;border-radius:50%;background:#2E9B5F;display:inline-block;box-shadow:0 0 0 0 rgba(46,155,95,.5);animation:ping 2.4s ease-out 1.2s 3}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(46,155,95,.55)}100%{box-shadow:0 0 0 14px rgba(46,155,95,0)}}
+.cloud{position:absolute;right:-40px;bottom:-30px;width:min(560px,70vw);z-index:1;opacity:.9;animation:drift 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes drift{from{transform:translateX(80px);opacity:0}to{transform:none;opacity:.9}}
 
-     <!--start -->
+/* sections */
+section.block{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--line)}
+section.block:last-of-type{border-bottom:0}
+.block h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.5vw,3rem);letter-spacing:-.03em;line-height:1.05;margin-bottom:clamp(24px,4vw,44px)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,5vw,72px)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  header.top{position:static}
+  header.top .wrap{flex-direction:column;align-items:flex-start;height:auto;padding:12px 0 8px;gap:4px}
+  nav ul{gap:18px;flex-wrap:wrap}
+}
+html,body{overflow-x:hidden}
+.prose p{max-width:62ch;margin-bottom:1.1em}
+.prose p:last-child{margin-bottom:0}
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="shortcut icon" href="images/logo.png" width="16px" height="16px" />
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px 40px}
+.skills h3{font-family:var(--display);font-weight:800;font-size:1.1rem;margin-bottom:8px}
+.skills ul{list-style:none;color:var(--slate)}
+.skills li{padding:5px 0;border-top:1px solid var(--line)}
+.skills li:last-child{border-bottom:1px solid var(--line)}
 
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-style.css">
+/* projects */
+.projects{list-style:none;border-top:2px solid var(--ink)}
+.projects li{border-bottom:1px solid var(--line)}
+.projects a{
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) 190px;gap:8px 32px;align-items:baseline;
+  padding:24px 6px;text-decoration:none;transition:background .2s,padding-left .2s;
+}
+.projects a:hover{background:var(--surface);padding-left:18px}
+.projects h3{font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:-.02em}
+.projects p{color:var(--slate)}
+.projects .stack{font-family:var(--display);font-weight:500;font-size:.9rem;color:var(--saffron);text-align:right;max-width:20ch}
+@media(max-width:760px){.projects a{grid-template-columns:1fr}.projects .stack{text-align:left;max-width:none}}
 
+/* timeline */
+.timeline{list-style:none;border-left:2px solid var(--ink);padding-left:28px;margin-left:6px}
+.timeline li{position:relative;padding-bottom:34px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-37px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--saffron-bright);border:2px solid var(--paper)}
+.timeline .when{font-family:var(--display);font-weight:500;font-size:.95rem;color:var(--saffron)}
+.timeline h3{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.015em}
+.timeline p{color:var(--slate);max-width:58ch}
+
+/* contact */
+.contact-links{list-style:none;display:grid;gap:0;border-top:2px solid var(--ink)}
+.contact-links a{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 6px;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,3vw,1.9rem);letter-spacing:-.02em;transition:background .2s,padding-left .2s}
+.contact-links a:hover{background:var(--surface);padding-left:18px}
+.contact-links span{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--slate);letter-spacing:0;text-align:right}
+@media(max-width:480px){.contact-links a{flex-direction:column;gap:2px}.contact-links span{text-align:left}}
+
+footer{padding:36px 0 56px;color:var(--slate);font-size:1rem}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cloud,.status i{animation:none}
+  *{transition:none!important}
+}
+</style>
 </head>
-
 <body>
-
-     <!-- PRE LOADER -->
-     <div class="preloader">
-          <div class="spinner">
-               <span class="spinner-rotate"></span>
-          </div>
-     </div>
-
-
-     <!-- HOME SECTION -->
-     <section id="home" class="parallax-section">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-offset-5 col-md-7 col-sm-12 " style="margin-bottom: 20px;">
-                         <div class="home-thumb">
-                              <h1 class="wow fadeInUp" data-wow-delay="0.4s"
-                                   style="color: white;text-shadow: 0px 1px black;">
-                                   Hello, I am Ratnesh
-                              </h1>
-                              <p class="wow fadeInUp white-color" style="color: white;text-shadow: 0px 1px black;"
-                                   data-wow-delay="0.6s"> </p>
-                              <a href="#service" class="wow fadeInUp smoothScroll btn btn-default section-btn"
-                                   data-wow-delay="1s" style="background-color: #A98C57;">discover more</a>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- SERVICE SECTION -->
-     <section id="service" class="parallax-section">
-          <div class="container">
-               <div class="row">
-
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <!-- SECTION TITLE -->
-                         <h2>What things i am doing...</h2>
-                         <p>A Bachelor of Technology is an undergraduate academic degree 
-                              conferred after the complotion of a four year program of 
-                              studies at an accredited university or accredited university-level 
-                              institution. And I am studying from Maharishi Markandeshwar University,
-                               Mullana from 2020 to 2024.</p>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                         <div class="service-thumb">
-                              <i class="fa fa-smile-o"></i>
-                              <h4>Cloud architecture</h4>
-                              <p>The fundamental components of cloud architecture include:</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                         <div class="service-thumb bg-grey">
-                              <i class="fa fa-globe"></i>
-                              <h4 class="white-color">Website Devlopment</h4>
-                              <p>Web development refers to the building, creating, and maintaining of websites.
-                              </p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-                         <div class="service-thumb">
-                              <i class="fa fa-lightbulb-o"></i>
-                              <h4>DevOps</h4>
-                              <p>DevOps is a set of practices that combines software development ( Dev) and IT operations ( Ops ).</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
-                         <div class="service-thumb">
-                              <i class="fa fa-code"></i>
-                              <h4>Android Devloper</h4>
-                              <p>Various (mostly Google and the Open Handset Alliance)
-                              </p>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- ABOUT SECTION -->
-     <section id="about" class="parallax-section">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-4 col-sm-8">
-                         <div class="about-image-thumb">
-                              <img src="images/bg2.jpg" class="wow fadeInUp img-responsive" data-wow-delay="0.2s"
-                                   alt="about image" width="650px" height="590px" alt="ratnesh-img-profile">
-                              <ul class="social-icon">
-                                   <li><a href="https://www.facebook.com/profile.php?id=100036031446159"
-                                             class="fa fa-facebook"></a>
-                                   </li>
-                                   <li><a href="https://www.twitter.com/ratnesh__30" class="fa fa-twitter"></a></li>
-                                   <li><a href="https://www.instagram.com/ratnesh__30" class="fa fa-instagram"></a>
-                                        <li><a href="https://wa.me/918969897992" class="fa fa-whatsapp"></a></li>
-                                        <li><a href="https://github.com/ratneshdad?tab=projects&type=beta" class="fa fa-github"></a></li>
-
-
-                                   </li>
-                              </ul>
-                         </div>
-                    </div>
-
-
-                    
-                    <div class="col-md-8 col-sm-12">
-                         <div class="about-thumb">
-                              <!-- SECTION TITLE -->
-                              <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-                                   <h2>A little more about Ratnesh</h2>
-
-                                   <p>Android Developer, DevOps, Website Devlopment, Cloud architecture & Front-end Developer</p>
-                              </div>
-                              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>I am a person who is positive about every aspect of life. There are many
-                                         things I like to do, to see, and to experience. I like to read, I like to
-                                          write; I like to think, I like to dream; I don't like to talk, I like to
-                                           listen. I like to see the sunrise in the morning, I like to see the moonlight
-                                            at night; I like to feel the music flowing on my face, I like to smell
-                                             the wind coming from the ocean. I like to look at the clouds in the sky
-                                              with a blank mind, I like to do thought experiment when I cannot sleep
-                                               in the middle of the night. I like flowers in spring, rain in summer,
-                                                leaves in autumn, and snow in winter. I like to sleep early, I like
-                                                 to get up late; I like to be alone, I like to be surrounded by people.
-                                                  I like country’s peace, I like metropolis’ noise; I like the beautiful
-                                                   west lake in Hangzhou, I like the flat cornfield in Champaign.
-                                                    I like delicious food and comfortable shoes; I like books and 
-                                                    cartoons movies. I like the land and the nature And, I like to laugh.</p>
-
-                                   <p>I always wanted to be a great writer, like Victor Hugo who wrote 
-                                        "Les Miserable", or like Roman Roland who wrote "John Christopher".
-                                         They have influenced millions of people through their books.
-                                          I also wanted to be a great psychologist, like William
-                                          James or Sigmund Freud, who could read people’s mind.
-                                           Of course, I am nowhere close to these people, yet.
-                                            I am just someone who does some teaching, some research,
-                                             and some writing. But my dream is still alive</p>
-                              </div>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-<hr>
-
-     <!-- WORK SECTION -->
-     <section id="work" class="parallax-section">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <!-- SECTION TITLE -->
-                         <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <h2>GALLERY</h2>
-                              <p>A large room for the exhibition of pictures</p>
-                         </div>
-                    </div>
-
-
-
-
-                    <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="images/gal1.jpg" class="image-popup">
-                                   <div class="work-thumb-overlay">
-                                        <h4 class="white-color">Kushinagar</h4>
-                                        <h2>Photo shoot by Ankit</h2>
-                                   </div>
-                                   <img src="images/gal1.jpg" class="img-responsive" alt="Work 1">
-                              
-                              </a>
-                         </div>
-                    </div>
-
-
-
-
-
-                    <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="images/gal2.jpg" class="image-popup">
-                                   <div class="work-thumb-overlay">
-                                        <h4 class="white-color">Chakrata</h4>
-                                        <h2>Photo shoot by Ankit</h2>
-                                   </div>
-                                   <img src="images/gal2.jpg" class="img-responsive" alt="Work 2">
-                              </a>
-                         </div>
-                    </div>
-
-
-
-
-
-                    <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="images/bg.jpg" class="image-popup">
-                                   <div class="work-thumb-overlay">
-                                        <h4 class="white-color">MMU </h4>
-                                        <h2>Photo shoot by Danish</h2>
-                                   </div>
-                                   <img src="images/bg.jpg" class="img-responsive" alt="Work 3">
-                              </a>
-                         </div>
-                    </div>
-
-
-
-
-
-                    <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="images/gal4.jpg" class="image-popup">
-                                   <div class="work-thumb-overlay">
-                                        <h4 class="white-color">Kushinagar</h4>
-                                        <h2>Photo shoot by Ankit</h2>
-                                   </div>
-                                   <img src="images/gal4.jpg" class="img-responsive" alt="Work 3">
-                              </a>
-                         </div>
-                    </div>
-                    
-                    
-
-                   
-                    
-                   
-                    </div>
-
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- CONTACT SECTION -->
-     <section id="contact" class="parallax-section">
-          <div class="container">
-               <div class="row">
-
-                    
-
-                   <center>
-
-                    <div class="col-md-12 col-sm-8 d-flex justify-content-center">
-                         <!-- CONTACT INFO -->
-                         <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
-                              <div class="section-title">
-                                   <h2>Contact Info</h2>
-                                   <!-- <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis et tortor consectetur
-                                        adipisicing lacinia tortor morbi ultricies.</p> -->
-                              </div>
-
-                              <p><i class="fa fa-map-marker"></i> <a
-                              href="https://www.bing.com/maps?osid=68dc53df-f9d3-49fa-acff-dd5b70f71ee5&cp=26.804487~84.49691&lvl=15&imgid=3dca26d1-7961-472b-8ffa-70a97d28202e&v=2&sV=2&form=S00027">Bettiah , Bihar </a></p>
-                              <p><i class="fa fa-comment"></i> <a
-                                        href="mailto:ratneshpandey6557@gmail.com">ratneshpandey6557@gmail.com</a></p>
-                              <p><i class="fa fa-phone"></i> <a
-                                   id="flink-corp" href="tel:+91-8969897992">+91-89698-97992</a></p>
-
-
-
-
-                         </div>
-                    </div>
-               </center>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- FOOTER SECTION -->
-     <footer>
-          <div class="container">
-               <div class="row">
-
-                    <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.8s">
-                         <div class="wow fadeInUp" data-wow-delay="1s">
-                              <ul class="social-icon">
-                                   <li><a href="https://www.facebook.com/profile.php?id=100036031446159"
-                                             class="fa fa-facebook"></a></li>
-                                   <li><a href="https://www.twitter.com/RATNESH__30" class="fa fa-twitter"></a></li>
-                                   <li><a href="https://www.instagram.com/ratnesh__30" class="fa fa-instagram"></a>
-                                   </li>
-
-                                   <li><a href="https://wa.me/918969897992" class="fa fa-whatsapp"></a></li>
-                                   <li><a href="https://github.com/ratneshdad?tab=projects&type=beta" class="fa fa-github"></a></li>
-
-
-                                  
-                                   
-
-                              </ul>
-                         </div>
-                    </div>
-               </div>
-     </footer>
-
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.parallax.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/jquery.magnific-popup.min.js"></script>
-     <script src="js/magnific-popup-options.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/custom.js"></script>
-
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Ratnesh Pandey, back to top">Ratnesh Pandey</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <svg class="cloud" viewBox="0 0 600 260" aria-hidden="true" focusable="false">
+      <g fill="var(--paper)">
+        <circle cx="140" cy="190" r="70"/>
+        <circle cx="250" cy="140" r="95"/>
+        <circle cx="380" cy="165" r="80"/>
+        <circle cx="480" cy="195" r="60"/>
+        <rect x="90" y="190" width="440" height="65" rx="32"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <h1><span>Ratnesh</span><span>Pandey</span></h1>
+      <p class="role">Software developer from Bettiah, Bihar. I build responsive web applications and e-commerce interfaces.</p>
+      <p class="status"><i aria-hidden="true"></i> Open to new opportunities</p>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap grid">
+      <h2>About</h2>
+      <div class="prose">
+        <p>I'm a software developer at Airing Private Limited, where I work on front-end development and PHP applications. I like turning a design into a page that loads fast, works on a phone and is easy to use.</p>
+        <p>I hold a B.Tech in Computer Science and Engineering with a specialisation in Cloud Computing from Maharishi Markandeshwar University, Mullana. Right now I'm going deeper into React, TypeScript and cloud computing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Front end</h3>
+          <ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>React</li></ul>
+        </div>
+        <div>
+          <h3>Back end and data</h3>
+          <ul><li>PHP</li><li>SQL</li></ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul><li>Git</li><li>GitHub</li><li>GitHub Pages</li></ul>
+        </div>
+        <div>
+          <h3>Learning now</h3>
+          <ul><li>React.js in depth</li><li>TypeScript</li><li>Cloud computing</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <a href="https://github.com/ratnesh89/project" target="_blank" rel="noopener">
+            <h3>Sign-up and course payments</h3>
+            <p>A web application with user sign-up and login, chat messaging and a course payment flow.</p>
+            <span class="stack">HTML, CSS, JavaScript, PHP, SQL</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ratnesh89/shoping" target="_blank" rel="noopener">
+            <h3>Shoping storefront</h3>
+            <p>A responsive e-commerce storefront with shop, product detail and cart pages.</p>
+            <span class="stack">HTML, CSS, JavaScript</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ratnesh89/JPS-SCHOOL-PROJECT" target="_blank" rel="noopener">
+            <h3>JPS School website</h3>
+            <p>A multi-page school website covering programs, teachers, events, a gallery and admissions.</p>
+            <span class="stack">HTML</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ratnesh89?tab=repositories" target="_blank" rel="noopener">
+            <h3>More on GitHub</h3>
+            <p>Smaller experiments and practice projects live in my repositories.</p>
+            <span class="stack">github.com/ratnesh89</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="journey">
+    <div class="wrap grid">
+      <h2>Journey</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">Dec 2024 to now</span>
+          <h3>Software Developer, Airing Private Limited</h3>
+          <p>Front-end development and PHP applications.</p>
+        </li>
+        <li>
+          <span class="when">2020 to 2024</span>
+          <h3>B.Tech in Computer Science and Engineering (Cloud Computing)</h3>
+          <p>Maharishi Markandeshwar University, Mullana.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <ul class="contact-links">
+        <li><a href="https://www.linkedin.com/in/ratnesh89/" target="_blank" rel="noopener">LinkedIn <span>Message me about a role or project</span></a></li>
+        <li><a href="https://github.com/ratnesh89" target="_blank" rel="noopener">GitHub <span>Read my code</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year">2026</span> Ratnesh Pandey. Hosted on GitHub Pages.</div>
+</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
-
 </html>
